@@ -46,7 +46,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous" />
-
+  <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
   <title>Google Faq Replica</title>
 </head>
@@ -57,6 +57,19 @@
         <img src="img/unnamed.png" alt="">
         <span>Privacy e termini</span>
       </div>
+      <div class="bottom-nav">
+        <ul>
+          <li>Introduzione</li>
+          <li>Norme sulla privacy</li>
+          <li>Termini di servizio</li>
+          <li>Tecnologie</li>
+          <li class="active">Domande frequenti
+            <div class="line">
+            </div>
+          </li>
+          
+        </ul>
+      </div>
     </div>
   </header>
   <main class="wrapper">
@@ -64,7 +77,7 @@
     <ul>
         <?php foreach ($db as $faq) { ?>
           <li>
-            <h3><?php echo $faq['question']; ?></h3>
+            <h2><?php echo $faq['question']; ?></h2>
           </li>
           <li>
             <?php echo $faq['answer']; ?>
